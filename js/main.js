@@ -193,31 +193,74 @@ class Portfolio {
         }
     }
 
+   
     handleFormSubmission(form) {
-        const formData = new FormData(form);
-        const formObject = Object.fromEntries(formData);
-        
-        // Validate form
-        if (!this.validateForm(formObject)) {
-            return;
-        }
+    const formData = new FormData(form);
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalText = submitButton.innerHTML;
 
-        // Show loading state
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalText = submitButton.innerHTML;
-        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        submitButton.disabled = true;
+    // Show loading
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitButton.disabled = true;
 
-        // Simulate form submission (replace with actual form handling)
-        setTimeout(() => {
+    
+    const getformEndpoint = "https://getform.io/f/aronworb";
+
+    fetch(getformEndpoint, {
+        method: "POST",
+        body: formData
+    })
+    .then((response) => {
+        if (response.ok) {
             this.showFormFeedback('success', 'Thank you! Your message has been sent successfully.');
             form.reset();
-            
-            // Reset button
-            submitButton.innerHTML = originalText;
-            submitButton.disabled = false;
-        }, 2000);
-    }
+        } else {
+            this.showFormFeedback('error', 'Oops! Something went wrong. Please try again later.');
+        }
+    })
+    .catch((error) => {
+        console.error("Form error:", error);
+        this.showFormFeedback('error', 'Network error. Please try again.');
+    })
+    .finally(() => {
+        submitButton.innerHTML = originalText;
+        submitButton.disabled = false;
+    });
+}
+handleFormSubmission(form) {
+    const formData = new FormData(form);
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalText = submitButton.innerHTML;
+
+    // Show loading
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitButton.disabled = true;
+
+    
+    const getformEndpoint = "https://getform.io/f/aronworb";
+
+    fetch(getformEndpoint, {
+        method: "POST",
+        body: formData
+    })
+    .then((response) => {
+        if (response.ok) {
+            this.showFormFeedback('success', 'Thank you! Your message has been sent successfully.');
+            form.reset();
+        } else {
+            this.showFormFeedback('error', 'Oops! Something went wrong. Please try again later.');
+        }
+    })
+    .catch((error) => {
+        console.error("Form error:", error);
+        this.showFormFeedback('error', 'Network error. Please try again.');
+    })
+    .finally(() => {
+        submitButton.innerHTML = originalText;
+        submitButton.disabled = false;
+    });
+}
+
 
     validateForm(formData) {
         const { name, email, subject, message } = formData;

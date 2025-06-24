@@ -181,17 +181,17 @@ class Portfolio {
         }
     }
 
-    // Contact form handling
-    // setupContactForm() {
-    //     const contactForm = document.getElementById('contact-form');
+    //Contact form handling
+    setupContactForm() {
+        const contactForm = document.getElementById('contact-form');
         
-    //     if (contactForm) {
-    //         contactForm.addEventListener('submit', (e) => {
-    //             e.preventDefault();
-    //             this.handleFormSubmission(contactForm);
-    //         });
-    //     }
-    // }
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                this.handleFormSubmission(contactForm);
+            });
+        }
+    }
 
    
     handleFormSubmission(form) {

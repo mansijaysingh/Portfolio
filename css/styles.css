@@ -470,11 +470,14 @@ body {
 .projects {
     padding: 6rem 0;
     background: var(--bg-primary);
+    text-align: center;
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Just one card, so stack vertical */
     gap: 2rem;
 }
 
@@ -484,6 +487,8 @@ body {
     overflow: hidden;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
+    max-width: 600px;
+    width: 100%;
 }
 
 .project-card:hover {
@@ -492,10 +497,17 @@ body {
 }
 
 .project-image {
-    height: 200px;
+    height: 300px;
     background: var(--gradient-primary);
     position: relative;
     overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .project-overlay {
@@ -544,10 +556,10 @@ body {
 }
 
 .project-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .project-description {
@@ -560,6 +572,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    justify-content: center;
 }
 
 .tech-tag {

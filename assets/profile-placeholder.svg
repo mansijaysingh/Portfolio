@@ -1,0 +1,68 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="faceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fde68a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hairGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#92400e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#78350f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="150" cy="150" r="150" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="80" cy="80" r="15" fill="rgba(255,255,255,0.2)" opacity="0.6"/>
+  <circle cx="220" cy="100" r="10" fill="rgba(255,255,255,0.3)" opacity="0.8"/>
+  <circle cx="250" cy="200" r="12" fill="rgba(255,255,255,0.2)" opacity="0.5"/>
+  <circle cx="60" cy="180" r="8" fill="rgba(255,255,255,0.4)" opacity="0.7"/>
+  
+  <!-- Hair -->
+  <ellipse cx="150" cy="120" rx="65" ry="50" fill="url(#hairGradient)"/>
+  <path d="M 85 120 Q 90 100 110 105 Q 130 95 150 100 Q 170 95 190 105 Q 210 100 215 120" fill="url(#hairGradient)"/>
+  
+  <!-- Face -->
+  <ellipse cx="150" cy="160" rx="50" ry="55" fill="url(#faceGradient)"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="135" cy="150" rx="8" ry="12" fill="#1f2937"/>
+  <ellipse cx="165" cy="150" rx="8" ry="12" fill="#1f2937"/>
+  <ellipse cx="135" cy="148" rx="3" ry="4" fill="#ffffff"/>
+  <ellipse cx="165" cy="148" rx="3" ry="4" fill="#ffffff"/>
+  
+  <!-- Eyebrows -->
+  <path d="M 125 140 Q 135 135 145 140" stroke="#92400e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 155 140 Q 165 135 175 140" stroke="#92400e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Nose -->
+  <path d="M 150 160 Q 152 165 150 170" stroke="#e5b887" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Mouth -->
+  <path d="M 140 180 Q 150 188 160 180" stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Clothing -->
+  <path d="M 100 200 Q 100 220 110 240 L 190 240 Q 200 220 200 200 L 200 300 L 100 300 Z" fill="#111827"/>
+  <rect x="130" y="210" width="40" height="30" rx="5" fill="#8b5cf6" opacity="0.8"/>
+  
+  <!-- Code Symbol on Shirt -->
+  <text x="150" y="230" text-anchor="middle" fill="white" font-family="monospace" font-size="14" font-weight="bold">&lt;/&gt;</text>
+  
+  <!-- Subtle Animation Elements -->
+  <g opacity="0.3">
+    <circle cx="50" cy="50" r="3" fill="white">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="50" r="2" fill="white">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="250" r="4" fill="white">
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

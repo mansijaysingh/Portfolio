@@ -35,12 +35,16 @@ Netlify (for deployment)
 markdown
 Copy
 Edit
+
+
 portfolio/
 ├── index.html
 ├── style.css
 ├── script.js
 └── assets/
     └── images/
+
+
 📬 Contact
 Feel free to connect with me:
 

@@ -643,6 +643,12 @@ body {
     color: var(--text-primary);
 }
 
+.method-value a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
 .contact-form {
     background: var(--bg-primary);
     padding: 2.5rem;

@@ -3,7 +3,7 @@ Welcome to my personal portfolio website!
 This project showcases my skills, featured projects, and how to get in touch with me. It's designed to be simple, modern, and responsive.
 
 🔗 Live Demo
-👉 Visit Portfolio
+👉 [Visit Portfolio](https://mansijay.netlify.app/)
 
 📌 Features
 Fully responsive layout
